@@ -15,7 +15,19 @@ public class JoseRocha {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        System.out.println("Hola mundo cruel");
+        //System.out.println("Hola mundo cruel");
+        
+        //Probaremos nuestra solucion
+        //Crear un usuario hipotetico
+        Usuario u = new Usuario();
+        //Asignar valores
+        u.altura=1.72f;
+        u.peso=63;
+        
+        //Generamos el modelo
+        Imc imc = new Imc();
+        imc.calcular(u);
+        System.out.println("El valor de imc es " + imc.calcular(u));
     }
     
 }
