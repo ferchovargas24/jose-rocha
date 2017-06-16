@@ -5,6 +5,8 @@
  */
 package jose.rocha;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author T-
@@ -106,13 +108,18 @@ public class Aplicacion extends javax.swing.JFrame {
         String tAltura = textoAltura.getText();
         float altura = Float.parseFloat(tAltura);
         
+        try{
         Usuario u = new Usuario();
-        u.altura = altura;
-        u.peso = peso;
-        
+        u.setAltura(altura);
+        u.setPeso(peso); 
         Imc imc = new Imc();
         imc.calcular(u);
         lblResultado.setText("El valor del imc es " + imc.calcular(u));
+        }catch(NumeroNoNegativoException e){
+            JOptionPane.showMessageDialog(null,e.getMessage());
+         }
+        
+       
     }//GEN-LAST:event_btImcActionPerformed
 
     /**

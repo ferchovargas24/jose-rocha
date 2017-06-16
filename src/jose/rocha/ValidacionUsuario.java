@@ -9,11 +9,9 @@ package jose.rocha;
  *
  * @author T-
  */
-public class Imc {
+public class ValidacionUsuario {
     
-    public float calcular (Usuario u){
-        //Aqui va la logica del calculo
-        float resultado = u.getPeso()/(u.getAltura()*u.getAltura());
-        return resultado;
+    public static void validarNoNegativo(float numero) throws NumeroNoNegativoException{
+     if(numero<0)throw new NumeroNoNegativoException();
     }
 }

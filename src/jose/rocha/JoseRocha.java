@@ -21,9 +21,6 @@ public class JoseRocha {
         //Crear un usuario hipotetico
         Usuario u = new Usuario();
         //Asignar valores
-        u.altura=1.72f;
-        u.peso=63;
-        
         //Generamos el modelo
         Imc imc = new Imc();
         imc.calcular(u);
